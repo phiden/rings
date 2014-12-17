@@ -5,7 +5,7 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Remove if you're not building a responsive site. (But then why would you do such a thing?) -->
 		
-		<!--<link href="css/screen.css" media="screen" rel="stylesheet" type="text/css" />-->
+		<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src='ring-sizer.js'></script>
@@ -17,35 +17,45 @@
 		<header>
 			
 			<img src="diamond.png" id="logo"/>
-			<h1>Find your shank size</h1>
+			
 			
 		</header>
 		
 		<div id='content-container'>
 			
+			<h1>Find your shank size</h1>
+			
 			<div id='size-calculator'>
 				
-				<label for='thick'>Enter the thickness of your metal.</label>
-				<input type='text' size='5' name='thick' id='thick'></input>
-				
-				<select id='thickSystem'>
+				<div class='form-field'>
+					<label for='thick'>Enter the thickness of your metal.</label><br>
+					<input type='text' size='5' name='thick' id='thick'></input>
 					
-					<option value='gauge' id='gauge'>Gauge</option>
-					<option value='milli' id='milli'>Millimeters</option>
-					
-				</select>
+					<select id='thickSystem'>
+						
+						<option value='gauge' id='gauge'>Gauge</option>
+						<option value='milli' id='milli'>Millimeters</option>
+						
+					</select>
+				</div>
 				
-				<label for='size'>What is your desired ring size?</label>
-				<input type='text' size='5' name='size' id='size'></input>
 				
-				<select id='sizeSystem'>
+				<div class='form-field'>
+					<label for='size'>What is your desired ring size?</label><br>
+					<input type='text' size='5' name='size' id='size'></input>
 					
-					<option value='us' id='us'>US ring size</option>
-					<option value='mm' id='mm'>Diameter in millimeters</option>
-					
-				</select>
+					<select id='sizeSystem'>
+						
+						<option value='us' id='us'>US ring size</option>
+						<option value='mm' id='mm'>Diameter in millimeters</option>
+						
+					</select>
+				</div>
 				
-				<a id='calculate' href=#>Calculate</a>
+				
+				<div class='form-field'>
+					<a id='calculate' href=#>Calculate</a>
+				</div>
 				
 			</div>
 			

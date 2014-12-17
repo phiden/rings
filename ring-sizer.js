@@ -42,7 +42,7 @@ $(document).ready(function() {
 			//error handling
 			if(inputSize == 0) {
 				
-				$('#answer').text("You'e entered a size we can't account for. Please round up or down to the nearest half-size and try again.");
+				$('#answer').text("You'e entered a size we can't account for. Please round up or down to the nearest half-size, or enter an inner diameter instead, and try again.");
 			}
 		}
 		
@@ -212,18 +212,17 @@ $(document).ready(function() {
 	
 	function calculateRingSize() {
 		
-		
 		//(diameter [of finished ring] + thickness of the stock) x Pi
 		
 		inputSize = Number(inputSize);
 		thickValue = Number(thickValue);
 		
-		var temp = inputSize + thickValue;
-		console.log('formula is: ', inputSize, '+', thickValue, "* PI");
+		//var temp = inputSize + thickValue;
+		//console.log('formula is: ', inputSize, '+', thickValue, "* PI");
 		
-		var size = (temp * 3.14);//.toFixed(1);
-		console.log("shank size is: ", size, temp);
+		var size = ((inputSize + thickValue) * 3.14).toFixed(1);
 		
-		$('#answer').text("Cut your shank to " + size + " mm in length. If your band is wider than 4mm, add .5mm to the length.");
+		$('#size-return').removeClass('hidden');
+		$('#answer').text(size + " mm in length. If your band is wider than 4mm, add .5mm to the length.");
 	}
 })
