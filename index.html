@@ -23,15 +23,40 @@
 		
 		<div id='content-container'>
 			
-			<label for='thick'>Enter the thickness of your metal.</label>
-			<input type='text' size='5' name='thick' id='thick'>
+			<div id='size-calculator'>
+				
+				<label for='thick'>Enter the thickness of your metal.</label>
+				<input type='text' size='5' name='thick' id='thick'></input>
+				
+				<select id='thickSystem'>
+					
+					<option value='gauge' id='gauge'>Gauge</option>
+					<option value='milli' id='milli'>Millimeters</option>
+					
+				</select>
+				
+				<label for='size'>What is your desired ring size?</label>
+				<input type='text' size='5' name='size' id='size'></input>
+				
+				<select id='sizeSystem'>
+					
+					<option value='us' id='us'>US ring size</option>
+					<option value='mm' id='mm'>Diameter in millimeters</option>
+					
+				</select>
+				
+				<a id='calculate' href=#>Calculate</a>
+				
+			</div>
 			
-			<label for='system'>Select a measurement system</label>
-			<input type='radio' name='us' id='us' value='us'>US ring sizes</input>
-			<input type='radio' name='mm' id='mm' value='mm'>Millimeters</input>
-			
-			<a href=#>Calculate</a>
-			
+			<div id='size-return' class='hidden'>
+				
+				<h3>Cut your shank to this size:</h3>
+				<h4 id='answer'></h4>
+				
+			</div>
+		
+		
 		</div>
 		
 		
