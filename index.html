@@ -1,0 +1,45 @@
+<html>
+	<head>
+		
+		<title>Ring Shank Sizer</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Remove if you're not building a responsive site. (But then why would you do such a thing?) -->
+		
+		<!--<link href="css/screen.css" media="screen" rel="stylesheet" type="text/css" />-->
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src='ring-sizer.js'></script>
+		
+	</head>
+	
+	<body>
+		
+		<header>
+			
+			<img src="diamond.png" id="logo"/>
+			<h1>Find your shank size</h1>
+			
+		</header>
+		
+		<div id='content-container'>
+			
+			<label for='thick'>Enter the thickness of your metal.</label>
+			<input type='text' size='5' name='thick' id='thick'>
+			
+			<label for='system'>Select a measurement system</label>
+			<input type='radio' name='us' id='us' value='us'>US ring sizes</input>
+			<input type='radio' name='mm' id='mm' value='mm'>Millimeters</input>
+			
+			<a href=#>Calculate</a>
+			
+		</div>
+		
+		
+		<footer>
+			
+			<small>Designed &amp; made by <a href='http://sophiadengo.com'>sophia dengo</a>, a jeweler &amp; webdev who needed the tool!</small>
+			
+		</footer>
+	</body>
+	
+</html>
